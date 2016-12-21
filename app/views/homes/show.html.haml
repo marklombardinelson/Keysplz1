@@ -5,24 +5,37 @@
   = link_to edit_home_path(@home), class: 'btn btn-primary' do
     %span.glyphicon.glyphicon-pencil
     Edit
+  = link_to home_path(@home), method: :delete, class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Delete
   %h1 Show home
 
-%dl.dl-horizontal
-  %dt Address:
-  %dd= @home.address
-  %dt Number-of-bedrooms:
-  %dd= @home.number_of_bedrooms
-  %dt Number-of-baths:
-  %dd= @home.number_of_baths
-  %dt Square-footage:
-  %dd= @home.square_footage
-  %dt Price:
-  %dd= @home.price
-  %dt Description:
-  %dd= @home.description
-  %dt Parking:
-  %dd= @home.parking
-  %dt Cover-image:
-  %dd= image_tag attachment_url(@home, :cover_image), size: "200x200"
-  %dt Agent:
-  %dd= @home.agent
+.container
+  .row
+    .col-xs-4.col-sm-4.col-md-4.col-sm-offset-1.col-md-offset-1
+      .panel.panel.default
+        .panel-heading.text-center.style-show-text
+          =@home.address
+        .ul.list-group.center.style-show-text
+          .li.list-group-item.style-show-text
+            Number of bedrooms:
+            =@home.number_of_bedrooms
+          .li.list-group-item.style-show-text
+            Number of baths:
+            =@home.number_of_baths
+          .li.list-group-item.style-show-text
+            Parking:
+            =@home.parking
+          .li.list-group-item.style-show-text
+            Square Footage:
+            =@home.square_footage
+          .li.list-group-item.style-show-text
+            Price:
+            =@home.price
+          .li.list-group-item.style-show-text
+            Description:
+            =@home.description
+    .col-xs-6.col-sm-6.col-md-6
+      .img-thumbnail{:style => "border:none; background:white;"}
+        .image-container.img
+        = image_tag attachment_url(@home, :cover_image), size: "700x500", class: "cover_image"

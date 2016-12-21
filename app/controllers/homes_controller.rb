@@ -26,7 +26,7 @@ class HomesController < ApplicationController
     @home.user = current_user
 
     if @home.save
-      redirect_to @home, notice: 'Home was successfully created.'
+      redirect_to homes_path, notice: 'Home was successfully created.'
     else
       render :new
     end
@@ -50,8 +50,8 @@ class HomesController < ApplicationController
   end
 
   private
-    # Only allow a trusted parameter "white list" through.
-    def home_params
-      params.require(:home).permit(:title, :link, :cover_image)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def home_params
+    params.require(:home).permit(:address, :number_of_bedrooms, :number_of_baths, :square_footage, :price, :description, :parking, :cover_image)
+  end
 end

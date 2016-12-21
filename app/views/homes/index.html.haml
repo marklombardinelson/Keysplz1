@@ -1,19 +1,15 @@
 .row
   - @homes.each do |home|
     .col-sm-4.col-lg-4.col-md-4
-      .thumbnail
-        = image_tag(attachment_url(home, :cover_image), size:"320x150")
+      .thumbnail{:style => "border:none; background:white;"}
+        - if home.cover_image
+          = image_tag attachment_url(home, :cover_image), size: "400x300"
+        - else
+          = image_tag("default.png")
         .caption
           %h4.pull-right= number_to_currency(home.price, precision: 0)
           %h4
-            = link_to truncate(home.address, length:30)
+            = link_to truncate(home.address, length:30), home_path(home)
           %p
             = truncate(home.description, length:200)
-        -# .ratings
-        -#   %p.pull-right 15 reviews
-        -#   %p
-        -#     %span.glyphicon.glyphicon-star
-        -#     %span.glyphicon.glyphicon-star
-        -#     %span.glyphicon.glyphicon-star
-        -#     %span.glyphicon.glyphicon-star
-        -#     %span.glyphicon.glyphicon-star
+          
