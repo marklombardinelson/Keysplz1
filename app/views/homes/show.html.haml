@@ -1,0 +1,28 @@
+.page-header
+  = link_to homes_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_home_path(@home), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show home
+
+%dl.dl-horizontal
+  %dt Address:
+  %dd= @home.address
+  %dt Number-of-bedrooms:
+  %dd= @home.number_of_bedrooms
+  %dt Number-of-baths:
+  %dd= @home.number_of_baths
+  %dt Square-footage:
+  %dd= @home.square_footage
+  %dt Price:
+  %dd= @home.price
+  %dt Description:
+  %dd= @home.description
+  %dt Parking:
+  %dd= @home.parking
+  %dt Cover-image:
+  %dd= image_tag attachment_url(@home, :cover_image), size: "200x200"
+  %dt Agent:
+  %dd= @home.agent

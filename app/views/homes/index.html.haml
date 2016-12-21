@@ -1,0 +1,19 @@
+.row
+  - @homes.each do |home|
+    .col-sm-4.col-lg-4.col-md-4
+      .thumbnail
+        = image_tag(attachment_url(home, :cover_image), size:"320x150")
+        .caption
+          %h4.pull-right= number_to_currency(home.price, precision: 0)
+          %h4
+            = link_to truncate(home.address, length:30)
+          %p
+            = truncate(home.description, length:200)
+        -# .ratings
+        -#   %p.pull-right 15 reviews
+        -#   %p
+        -#     %span.glyphicon.glyphicon-star
+        -#     %span.glyphicon.glyphicon-star
+        -#     %span.glyphicon.glyphicon-star
+        -#     %span.glyphicon.glyphicon-star
+        -#     %span.glyphicon.glyphicon-star
