@@ -1,24 +1,16 @@
-# README
+# Keysplz1
+   
+### Purpose ###
+Build a house shopping app similar to Zillow/etc.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- - - -
+### How ###
+*	Rails
+*	Gems Ominiauth and Omniauth-github- these gems were used to create the authorization and authentication on the app using github login. Omniauth also helped create the rails User and Sessions models.
+*	Bootstrap 
+*	Edited. scss files for formatting and styling.
+*	Created a seed.rb file to have stock photos of homes to display on app.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- - - -
+### Result ###
+![screenshot] (https://github.com/kaxcode/minipillow/blob/master/doc/mini-pillow-demo.gif
