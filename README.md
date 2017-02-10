@@ -13,4 +13,4 @@ Build a house shopping app similar to Zillow/etc.
 
 - - - -
 ### Result ###
-![screenshot] (https://github.com/kaxcode/minipillow/blob/master/doc/mini-pillow-demo.gif
+![screenshot] (https://github.com/marklombardinelson/Keysplz1/blob/master/doc/Keysplz1.gif)
